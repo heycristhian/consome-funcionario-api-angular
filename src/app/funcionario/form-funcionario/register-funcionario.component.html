@@ -1,0 +1,48 @@
+<div class="content">
+    <form [formGroup]="registerForm" class="form" action="">
+        <h2 id="titulo-form">REGISTRAR FUNCIONÁRIO</h2>
+
+        <app-error-message 
+        *ngIf="registerForm.get('name').errors?.required" 
+        text="Nome do funcionário é obrigatório">
+        </app-error-message>
+
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input class="input-field" type="text" placeholder="Inseria seu nome" formControlName="name" autofocus>
+        </div>
+
+        <app-error-message 
+        *ngIf="registerForm.get('cpf').errors?.required" 
+        text="CPF do funcionário é obrigatório">
+        </app-error-message>
+
+        <div class="input-container">
+            <i class="fa far fa-id-card icon"></i>
+            <input class="input-field" type="text" placeholder="Insira seu CPF" formControlName="cpf">
+        </div>
+        
+        <app-error-message 
+        *ngIf="registerForm.get('dataNascimento').errors?.required" 
+        text="Data de nascimento do funcionário é obrigatório">
+        </app-error-message>
+
+        <div class="input-container">
+            <i class="fa fas fa-calendar icon"></i>
+            <input class="input-field" type="date" formControlName="dataNascimento">
+        </div>
+        <div class="input-container">
+            <i class="fa fas fa-briefcase icon"></i>
+            <select formControlName="cargoDescricao" id="">
+                <option value="DESENVOLVEDOR">DESENVOLVEDOR</option>
+                <option value="ANALISTA I">ANALISTA I</option>
+                <option value="ANALISTA II">ANALISTA II</option>
+            </select>
+        </div>
+
+        <ul id="mensagens-erro"></ul>
+
+        <button [disabled]="registerForm.invalid" type="submit" class="btn">Adicionar</button>
+        <a href="/list-funcionarios" class="w3-button btn-cancel">Voltar</a>
+    </form>
+</div>

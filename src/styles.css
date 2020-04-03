@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC&display=swap');
+
+* {box-sizing: border-box;}
+
+.content {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+table { 
+    box-shadow: 10px 10px 5px #888; 
+    margin-bottom: 50px;
+}
+
+#titulo-form {
+    text-align: center;
+    font-family: 'Patrick Hand SC', cursive;
+}
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.mensagens-erro {
+  padding: 5px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: red;
+  opacity: 60%;
+  color: white;
+}
+
+.invisivel {
+  display: none;
+}

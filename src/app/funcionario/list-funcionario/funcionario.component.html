@@ -1,0 +1,28 @@
+<div class="content">
+
+  <div class="filter">
+    <label for="gsearch">Search: </label>
+    <input type="search" id="gsearch" name="gsearch" (keyup)="filter = $event.target.value">
+  </div>
+
+  <table class="w3-table w3-blue">
+    <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Cargo</th>
+    </tr>
+    <tr *ngFor="let item of funcionarios | filterByName: filter">
+      <td>{{ item.nome }}</td>
+      <td>{{ item.cpf }}</td>
+      <td>{{ item.descricaoCargo }}</td>
+    </tr>
+
+
+  </table>
+
+  <hr>
+
+  <a href="/register-funcionario">
+    <button class="btn">Adicionar funcionário</button>
+  </a>
+</div>
