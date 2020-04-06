@@ -1,6 +1,8 @@
+import { Cargo } from "./cargo";
+
 export interface Funcionario {
 
     nome:string;
     cpf:string;
-    cargoDescricao:string 
+    cargo: Cargo;
 }

@@ -14,7 +14,7 @@
     <tr *ngFor="let item of funcionarios | filterByName: filter">
       <td>{{ item.nome }}</td>
       <td>{{ item.cpf }}</td>
-      <td>{{ item.descricaoCargo }}</td>
+      <td>{{ item.cargo.descricao }}</td>
     </tr>
 
 
@@ -26,3 +26,4 @@
     <button class="btn">Adicionar funcionário</button>
   </a>
 </div>
+

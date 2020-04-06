@@ -1,5 +1,5 @@
 import { PipeTransform, Pipe } from "@angular/core";
-import { Funcionario } from "../model-funcionario/funcionario";
+import { Funcionario } from "../model/funcionario";
 
 @Pipe({ name: 'filterByName'})
 export class filterByName implements PipeTransform {

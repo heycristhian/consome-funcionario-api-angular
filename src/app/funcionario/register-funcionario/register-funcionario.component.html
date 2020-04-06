@@ -1,5 +1,5 @@
 <div class="content">
-    <form [formGroup]="registerForm" class="form" action="">
+    <form [formGroup]="registerForm" class="form" (submit)="enviar()">
         <h2 id="titulo-form">REGISTRAR FUNCIONÁRIO</h2>
 
         <app-error-message 
@@ -33,7 +33,7 @@
         </div>
         <div class="input-container">
             <i class="fa fas fa-briefcase icon"></i>
-            <select formControlName="cargoDescricao" id="">
+            <select formControlName="descricaoCargo" id="">
                 <option value="DESENVOLVEDOR">DESENVOLVEDOR</option>
                 <option value="ANALISTA I">ANALISTA I</option>
                 <option value="ANALISTA II">ANALISTA II</option>

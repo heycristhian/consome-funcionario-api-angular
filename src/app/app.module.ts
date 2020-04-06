@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FuncionarioModule } from './funcionario/module-funcionario/funcionario.module';
-import { RegisterFuncionarioComponent } from './funcionario/form-funcionario/register-funcionario.component';
+import { RegisterFuncionarioComponent } from './funcionario/register-funcionario/register-funcionario.component';
 import { AppRountingModule } from './app.routing.module';
 import { APP_BASE_HREF } from '@angular/common';
 import { ErrorsModule } from './errors/module/errors.module';
