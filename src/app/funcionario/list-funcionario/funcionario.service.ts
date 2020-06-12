@@ -9,13 +9,13 @@ export class FuncionarioService {
 
     ListFuncionario() {
         return this.http
-            .get<Funcionario[]>("http://localhost:8080/heycristhian-service/funcionarios");
+            .get<Funcionario[]>("http://localhost:8080/service/funcionarios");
 
     }
 
     getFuncionario(parametro: string) {
         return this.http
-            .get<Object[]>("http://localhost:8080/heycristhian-service/funcionarios?consulta=" + parametro);
+            .get<Object[]>("http://localhost:8080/service/funcionarios?consulta=" + parametro);
 
     }
 }
