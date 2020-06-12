@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const url = 'http://localhost:8080/heycristhian-service/funcionarios';
+const url = 'http://localhost:8080/service/funcionarios';
 
 @Injectable({
   providedIn: 'root'
