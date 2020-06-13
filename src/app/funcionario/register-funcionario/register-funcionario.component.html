@@ -9,8 +9,8 @@
 
         <div class="input-container">
             <i class="fa fa-user icon"></i>
-            <input class="input-field" type="text" placeholder="Inseria seu nome" formControlName="name" autofocus>
-        </div>
+            <input class="input-field" type="text" [value]="funcionario" placeholder="Inseria seu nome" formControlName="name" autofocus>
+        </div>       
 
         <app-error-message 
         *ngIf="registerForm.get('cpf').errors?.required" 

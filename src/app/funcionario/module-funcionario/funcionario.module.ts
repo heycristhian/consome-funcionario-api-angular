@@ -16,13 +16,13 @@ import { ErrorMessageComponent } from 'src/app/shared/components/error-message/e
   ],
   declarations: [
     FuncionarioComponent,
-    filterByName
+    filterByName,
   ],
   exports: [
     FuncionarioComponent,
     ReactiveFormsModule,
     FormsModule,
-    ErrorMessageComponent
+    ErrorMessageComponent,
   ]
 })
 export class FuncionarioModule { }

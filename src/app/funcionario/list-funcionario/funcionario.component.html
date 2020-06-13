@@ -7,16 +7,23 @@
 
   <table class="w3-table w3-blue">
     <tr>
+      <th>ID</th>
       <th>Nome</th>
       <th>CPF</th>
       <th>Cargo</th>
+      <th></th>
+      <th></th>
     </tr>
     <tr *ngFor="let item of funcionarios | filterByName: filter">
+      <td>{{ item.id }}</td>
       <td>{{ item.nome }}</td>
       <td>{{ item.cpf }}</td>
       <td>{{ item.cargo.descricao }}</td>
+      <td id="btn">
+        <button (click)="edit(item)" class="w3-button w3-hover-purple">Editar</button> 
+        <button (click)="delete(item.id)" class="w3-button w3-hover-red">Excluir</button>
+      </td>
     </tr>
-
 
   </table>
 
@@ -25,5 +32,7 @@
   <a href="/register-funcionario">
     <button class="btn">Adicionar funcionário</button>
   </a>
+
+  
 </div>
 

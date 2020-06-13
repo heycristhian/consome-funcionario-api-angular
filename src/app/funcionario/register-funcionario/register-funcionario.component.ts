@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterFuncionarioService } from './register-funcionario.service';
+import { Funcionario } from '../model/funcionario';
 
 @Component({
   selector: 'app-register-funcionario',
@@ -11,6 +12,7 @@ import { RegisterFuncionarioService } from './register-funcionario.service';
 export class RegisterFuncionarioComponent implements OnInit {
 
   registerForm: FormGroup;
+  funcionario: Funcionario;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -42,5 +44,4 @@ export class RegisterFuncionarioComponent implements OnInit {
       }
       );
   }
-
 }
