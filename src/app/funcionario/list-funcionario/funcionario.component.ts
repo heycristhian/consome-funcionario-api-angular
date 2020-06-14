@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FuncionarioService } from './funcionario.service';
 import { Funcionario } from '../model/funcionario';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { RegisterFuncionarioComponent } from '../register-funcionario/register-funcionario.component';
 
 @Component({
@@ -17,7 +17,9 @@ export class FuncionarioComponent implements OnInit {
   register: RegisterFuncionarioComponent;
 
 
-  constructor(private funcionarioService: FuncionarioService, private router: Router) {
+  constructor(private funcionarioService: FuncionarioService, 
+    private router: Router,
+    private route: ActivatedRoute) {
   }
   
   ngOnInit() {
@@ -47,5 +49,9 @@ export class FuncionarioComponent implements OnInit {
       .update(func)
       .subscribe();
     window.location.reload();
+  }
+
+  onEdit(id: number) {
+    this.router.navigate(['edit-funcionario', id], );
   }
 }

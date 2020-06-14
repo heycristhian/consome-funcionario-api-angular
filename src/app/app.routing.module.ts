@@ -9,7 +9,8 @@ const routes: Routes = [
     { path: 'list-funcionarios', component: FuncionarioComponent },
     { path: '', component: FuncionarioComponent },
     { path: 'register-funcionario', component: RegisterFuncionarioComponent },
-    { path: '**', component: NotFoundComponent } 
+    { path: 'edit-funcionario/:id', component: RegisterFuncionarioComponent },
+    { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

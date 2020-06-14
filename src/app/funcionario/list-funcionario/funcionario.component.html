@@ -20,7 +20,7 @@
       <td>{{ item.cpf }}</td>
       <td>{{ item.cargo.descricao }}</td>
       <td id="btn">
-        <button (click)="edit(item)" class="w3-button w3-hover-purple">Editar</button> 
+        <button (click)="onEdit(item.id)" class="w3-button w3-hover-purple">Editar</button> 
         <button (click)="delete(item.id)" class="w3-button w3-hover-red">Excluir</button>
       </td>
     </tr>
